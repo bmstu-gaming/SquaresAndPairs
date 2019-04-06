@@ -1,11 +1,22 @@
 
-#include <iostream>
+#include <SFML/Graphics.hpp>
 
 int main() {
+	sf::RenderWindow window(sf::VideoMode(3840, 2160), "SFML works!");
+	sf::CircleShape shape(1000.f, 300);
+	shape.setFillColor(sf::Color::Green);
 
-	//	check push skills
-	std::cout << "Hello world!" << std::endl;
+	while (window.isOpen()) {
+		sf::Event event;
+		while (window.pollEvent(event)) {
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		window.clear();
+		window.draw(shape);
+		window.display();
+	}
 
 	return 0;
 }
-
