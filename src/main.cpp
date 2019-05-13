@@ -12,10 +12,12 @@ int main() {
 	sf::Window window;
 	window.create(sf::VideoMode(1280, 720), "Game", sf::Style::Close);
 	//	change the position of the window (relatively to the desktop)
-	window.setPosition(sf::Vector2i(50, 50));
-
+	window.setPosition(sf::Vector2i(500, 50));
+	/*	Doesn't work
 	//	vertical synchronization enable
-	//window.setVerticalSyncEnabled(true);
+	window.setVerticalSyncEnabled(true);
+	*/
+	
 	//	given framerate
 	window.setFramerateLimit(60);
 	/*
