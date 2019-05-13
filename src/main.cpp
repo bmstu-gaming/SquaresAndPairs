@@ -19,7 +19,7 @@ int main() {
 	*/
 	
 	//	given framerate
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(300);
 	/*
 	sf::CircleShape shape(100.f, 300);
 	shape.setFillColor(sf::Color::Green);
