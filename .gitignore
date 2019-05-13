@@ -340,4 +340,4 @@ ASALocalRun/
 healthchecksdb
 
 # own ignore
-extlib/SFML-build
+extlib/SFML-build/
