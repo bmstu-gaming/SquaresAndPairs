@@ -115,7 +115,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)extlib\SFML\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)extlib\SFML-build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-system-d.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-main-d.lib;sfml-network-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -155,7 +155,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)extlib\SFML\build\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)extlib\SFML-build\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-system.lib;sfml-audio.lib;sfml-graphics.lib;sfml-main.lib;sfml-network.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\Documents\Visual Studio 2019\Projects\SquaresAndPairs\extlib\SFML-build\CMakeFiles\b05453b13844df067862f9688dea563f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{097D78DC-3057-3760-8915-0B63C9A8D32B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
