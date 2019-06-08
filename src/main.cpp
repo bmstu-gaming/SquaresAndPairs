@@ -1,40 +1,126 @@
+/******************************************************************************
+*
+*	@file	main.cpp
+*
+*	@brief	This file contains the game logic
+*
+*	Group: BMSTU GaminG
+*	Target Device: PC
+*
+******************************************************************************
+
+Copyright (c) 2019, BMSTU GaminG Incorporated
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+*  Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+*  Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+*  Neither the name of Texas Instruments Incorporated nor the names of
+its contributors may be used to endorse or promote products derived
+from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+******************************************************************************
+Release Name: 
+Release Date: 
+*****************************************************************************/
+
+/*********************************************************************
+*	INCLUDES
+*/
 #include <stdio.h>
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
-
 #include <thread>
 
-/*
- *
- */
+/*********************************************************************
+*	MACROS
+*/
+
+/*********************************************************************
+*	CONSTANTS
+*/
+
+/*********************************************************************
+*	TYPEDEFS
+*/
+
+/*********************************************************************
+*	GLOBAL VARIABLES
+*/
+
+/*********************************************************************
+* LOCAL VARIABLES
+*/
+
+/*********************************************************************
+* LOCAL FUNCTIONS
+*/
+
+/*********************************************************************
+* EXTERN FUNCTIONS
+*/
+
+/*********************************************************************
+* PROFILE CALLBACKS
+*/
+
+/*********************************************************************
+* PUBLIC FUNCTIONS
+*/
+
+/*****************************************************************
+*	@fn		threadRenderingWindow
+*
+*	@brief	Render each frame in window
+*	
+*/
 void threadRenderingWindow(sf::RenderWindow* window) {
 
-	// activate the window's context
+	//	activate the window's context
 	window->setActive(true);
+	
+	//	Load font
+	sf::Font font;
+	if (!font.loadFromFile("assets/Consolas.ttf")) {
+		std::cerr << "Font load error" << std::endl;
+	}
+
 	sf::Clock clock;
 	// the rendering loop
 	while ( window->isOpen() ) {
-		//	Start the current frame
-			//	Load font
-			
-			sf::Font font;
-			if (!font.loadFromFile("assets/Consolas.ttf")) {
-				std::cerr << "Font load error" << std::endl;
-			}
+		//	Start the current frame			
 
-			//	Add text for FPS counter
-			sf::Text fpsText;
-			fpsText.setFont(font);
-			fpsText.setCharacterSize(24);
-			fpsText.setFillColor(sf::Color::Green);
-
-			//	Add square
-			sf::RectangleShape square(sf::Vector2f(50, 50));
-			square.setPosition(600, 300);
-			square.setFillColor(sf::Color::Red);
-
-			
+		//	Add text for FPS counter
+		sf::Text fpsText;
+		fpsText.setFont(font);
+		fpsText.setCharacterSize(24);
+		fpsText.setFillColor(sf::Color::Green);
+		
+		//	Add square
+		sf::RectangleShape square(sf::Vector2f(50, 50));
+		square.setPosition(600, 300);
+		square.setFillColor(sf::Color::Red);
 
 		//	End the current frame
 		sf::Time elapsed = clock.restart();
@@ -49,9 +135,12 @@ void threadRenderingWindow(sf::RenderWindow* window) {
 	}
 }
 
-/*
- *	Start point
- */
+/*****************************************************************
+*	@fn		main
+*
+*	@brief	The main program
+*	
+*/
 int main() {
 
 
@@ -170,3 +259,6 @@ int main() {
 
 	return 0;
 }
+
+/*********************************************************************
+*********************************************************************/
