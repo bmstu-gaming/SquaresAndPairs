@@ -9,8 +9,8 @@
 int main() {
 
 
-	sf::Window window;
-	window.create(sf::VideoMode(1280, 720), "Game", sf::Style::Close);
+	sf::RenderWindow window;
+	window.create(sf::VideoMode(1280, 720), "Game", sf::Style::Default);
 	//	change the position of the window (relatively to the desktop)
 	window.setPosition(sf::Vector2i(500, 50));
 	/*	Doesn't work
@@ -24,6 +24,10 @@ int main() {
 	sf::CircleShape shape(100.f, 300);
 	shape.setFillColor(sf::Color::Green);
 	*/
+
+	sf::RectangleShape square(sf::Vector2f(50, 50));
+	square.setPosition(600, 300);
+	square.setFillColor(sf::Color::Red);
 
 	//	run the program as long as the window is open
 	while ( window.isOpen() ) {
@@ -122,6 +126,14 @@ int main() {
 
 
 		}
+
+		window.clear(sf::Color::Black);
+
+		window.draw(square);
+
+
+		window.display();
+
 	}
 	return 0;
 }
