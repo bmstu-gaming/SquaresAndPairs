@@ -4,20 +4,18 @@
 
 namespace snp {
 
-class App {
-public:
-	static App* getInstance();
+	class App {
+	public:
+		static App* getInstance();
 
+	private:
+		App();
+		~App();
 
-private:
-	App();
-	~App();
+		App(const App&)				= delete;
+		App& operator=(const App&)	= delete;
 
-	App(const App&) = delete;
-	App& operator=(const App&) = delete;
-
-	static App* instance;
-	static std::mutex mtx;
-};
-
+		static App* instance;
+		static std::mutex mtx;
+	};
 }

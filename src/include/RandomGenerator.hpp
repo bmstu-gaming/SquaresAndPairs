@@ -4,19 +4,18 @@
 
 namespace snp {
 
-class RandomGenerator {
-public:
-	RandomGenerator();
-	~RandomGenerator();
+	class RandomGenerator {
+	public:
+		RandomGenerator();
+		~RandomGenerator();
 
-	RandomGenerator(unsigned int seed);
+		RandomGenerator(unsigned int seed);
 
-	void setInterval(unsigned int a, unsigned int b);
-	unsigned int operator()();
+		void setInterval(unsigned int a, unsigned int b);
+		unsigned int operator()();
 
-private:
-	std::mt19937 generator;
-	std::uniform_int_distribution<unsigned int> distribution;
-};
-
+	private:
+		std::mt19937 generator;
+		std::uniform_int_distribution<unsigned int> distribution;
+	};
 }

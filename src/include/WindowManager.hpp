@@ -5,13 +5,13 @@
 
 namespace snp {
 
-class WindowManager {
-public:
-	WindowManager();
-	~WindowManager();
+	class WindowManager {
+	public:
+		WindowManager();
+		~WindowManager();
 
-private:
-	sf::RenderWindow window;
-};
+	private:
+		sf::RenderWindow window;
+	};
 
 }
