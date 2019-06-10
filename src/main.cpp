@@ -49,13 +49,10 @@ Release Date:
 */
 #include <stdio.h>
 #include <iostream>
-#include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 #include <thread>
 
-/*********************************************************************
-*	MACROS
-*/
 
 /*********************************************************************
 *	CONSTANTS
@@ -66,27 +63,7 @@ Release Date:
 */
 
 /*********************************************************************
-*	GLOBAL VARIABLES
-*/
-
-/*********************************************************************
-* LOCAL VARIABLES
-*/
-
-/*********************************************************************
 * LOCAL FUNCTIONS
-*/
-
-/*********************************************************************
-* EXTERN FUNCTIONS
-*/
-
-/*********************************************************************
-* PROFILE CALLBACKS
-*/
-
-/*********************************************************************
-* PUBLIC FUNCTIONS
 */
 
 /*****************************************************************
@@ -143,7 +120,6 @@ void threadRenderingWindow(sf::RenderWindow* window) {
 */
 int main() {
 
-
 	sf::RenderWindow window;
 	window.create(sf::VideoMode(1280, 720), "Game", sf::Style::Default);
 	//	change the position of the window (relatively to the desktop)
@@ -195,7 +171,7 @@ int main() {
 			if ( event.type == sf::Event::KeyPressed ) {
 				if ( event.key.code == sf::Keyboard::Escape ) {
 					std::cout << "the ESC key was pressed" << std::endl;
-					thread.detach();
+					
 					window.close();
 				}
 			}
