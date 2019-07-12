@@ -116,7 +116,7 @@ void threadRenderingWindow(sf::RenderWindow* window) {
 }
 
 /*****************************************************************
-*	@fn		main
+*	@fn		main123
 *
 *	@brief	The main program
 *	
