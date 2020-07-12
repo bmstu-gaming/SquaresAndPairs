@@ -52,6 +52,7 @@ Release Date:
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include <thread>
+#include <mutex>
 
 /*********************************************************************
 *	CLASSES
@@ -122,6 +123,7 @@ void threadRenderingWindow(sf::RenderWindow* window) {
 *	
 */
 int main() {
+	std::mutex programEnd;
 
 	sf::RenderWindow window;
 	window.create(sf::VideoMode(1280, 720), "Game", sf::Style::Default);
@@ -176,6 +178,7 @@ int main() {
 					std::cout << "the ESC key was pressed" << std::endl;
 					
 					window.close();
+					std::thread detach();
 				}
 			}
 			//	The MouseButtonPressed and MouseButtonReleased events
